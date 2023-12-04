@@ -33,7 +33,7 @@ func createDB() *gorm.DB {
 func main() {
 	db := createDB()
 	var version string
-	db.Raw("SELECT VERSION();").Scan(&version)
+	db.Raw("SELECT VERSION()").Scan(&version)
 
 	fmt.Println("TiDB version: ", version)
 }
